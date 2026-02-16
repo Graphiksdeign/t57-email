@@ -79,56 +79,61 @@ function build() {
     cal: document.getElementById('v-cal').value
   };
 
-  const signatureHTML = `<table id="sig-table" role="presentation" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 600px; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; color: #111;">
+  const signatureHTML = `<table id="sig-table" role="presentation" cellpadding="0" cellspacing="0" border="0" style="width: 100%; max-width: 500px; border-collapse: collapse; font-family: Arial, Helvetica, sans-serif; color: #111111; line-height: 1.2;">
   <tr>
-    <td colspan="2" valign="top" style="padding-bottom:5px;">
-      <div style="font-size:12px; color: #111;">Warm Regards,</div>
-      <div style="font-size:25px; font-weight:800; color:#1E2A78; line-height: 30px;">${f.name}</div>
-      <div style="font-size:15px; font-weight:800; color:#696969; line-height: 20px;">${f.role}</div>
-      <div style="font-size:15px; color:#696969; line-height: 20px;">${f.city}</div>
+    <td colspan="2" valign="top" style="padding-bottom: 5px; mso-line-height-rule: exactly;">
+      <div style="font-size: 12px; color: #111111; margin-bottom: 2px;">Warm Regards,</div>
+      <div style="font-size: 25px; font-weight: 800; color: #1E2A78; line-height: 30px;">${f.name}</div>
+      <div style="font-size: 15px; font-weight: 800; color: #696969; line-height: 20px;">${f.role}</div>
+      <div style="font-size: 15px; color: #696969; line-height: 20px;">${f.city}</div>
     </td>
   </tr>
+
   <tr>
-    <td style="padding-top:10px; width: 50%;">
-      <a href="mailto:${f.email}" style="text-decoration:none; color:#696969; font-size:16px;">${f.email}</a>
+    <td width="50%" valign="middle" style="padding-top: 10px; width: 50%;">
+      <a href="mailto:${f.email}" style="text-decoration: none; color: #696969; font-size: 14px;">${f.email}</a>
     </td>
-    <td style="text-align:right; padding-top:10px; width: 50%;">
-      <a href="https://www.linkedin.com/in/${f.li}" style="text-decoration:none; color:#696969; font-size:16px;">
-        <img src="${b}lnkn.svg" width="22" style="border:0;"> /in/${f.li}
+    <td width="50%" align="right" valign="middle" style="padding-top: 10px; width: 50%;">
+      <a href="https://www.linkedin.com/in/${f.li}" style="text-decoration: none; color: #696969; font-size: 14px;">
+        <img src="${b}lnkn.png" width="18" height="18" alt="LinkedIn" style="border: 0; vertical-align: middle; display: inline-block;">&nbsp;/in/${f.li}
       </a> 
     </td>
   </tr>
+
   <tr>
-    <td style="padding-bottom:10px; width: 50%;">
-      <a href="tel:${f.phone.replace(/\s/g, '')}" style="text-decoration:none; color:#696969; font-size:16px;">${f.phone}</a>
+    <td width="50%" valign="middle" style="padding-bottom: 10px; width: 50%;">
+      <a href="tel:${f.phone.replace(/\s/g, '')}" style="text-decoration: none; color: #696969; font-size: 14px;">${f.phone}</a>
     </td>
-    <td style="text-align:right; padding-bottom:10px; width: 50%;">
-      <a href="https://calendly.com/${f.cal}" style="text-decoration:none; color:#696969; font-size:14px;">
-        <img src="${b}call.svg" width="22" style="border:0; vertical-align: middle;"> Book time to meet with me
+    <td width="50%" align="right" valign="middle" style="padding-bottom: 10px; width: 50%;">
+      <a href="https://calendly.com/${f.cal}" style="text-decoration: none; color: #696969; font-size: 14px;">
+        <img src="${b}call.png" width="18" height="18" alt="Calendar" style="border: 0; vertical-align: middle; display: inline-block;">&nbsp;Book time to meet
       </a>
     </td>
   </tr>
+
   <tr>
-    <td colspan="2" style="height: 2px; background-color: #696969; line-height: 2px; font-size: 1px;">&nbsp;</td>
+    <td colspan="2" style="padding: 0; height: 2px; background-color: #696969; line-height: 2px; font-size: 1px;">&nbsp;</td>
   </tr>
+
   <tr>
-    <td style="text-align:left; padding:15px 0;">
-       <a href="https://trade57.ai">
-        <img src="${b}logo.svg" width="120" style="border:0;">
+    <td align="left" valign="middle" style="padding: 15px 0;">
+       <a href="https://trade57.ai" style="text-decoration: none;">
+        <img src="${b}logo.png" width="100" border="0" alt="Logo" style="display: block;">
        </a>
     </td>
-    <td style="text-align:right; padding:15px 0;">
-      <a href="https://www.linkedin.com/company/t57" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-linkn.svg" width="24" style="border:0;"></a>
-      <a href="https://x.com/T57_ai" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-x.svg" width="24" style="border:0;"></a>
-      <a href="https://www.tiktok.com/@t57.ai" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-tk.svg" width="24" style="border:0;"></a>
-      <a href="https://www.youtube.com/@T57_ai" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-utube.svg" width="24" style="border:0;"></a>
-      <a href="https://www.facebook.com/T57.io" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-fb.svg" width="24" style="border:0;"></a>
-      <a href="https://www.instagram.com/t57.ai/" style="text-decoration:none; margin-left:8px;"><img src="${b}grp-ig.svg" width="24" style="border:0;"></a>
+    <td align="right" valign="middle" style="padding: 15px 0;">
+      <a href="https://www.linkedin.com/company/t57" style="text-decoration: none;"><img src="${b}grp-linkn.png" width="22" height="22" border="0" style="display: inline-block;"></a>&nbsp;
+      <a href="https://x.com/T57_ai" style="text-decoration: none;"><img src="${b}grp-x.png" width="22" height="22" border="0" style="display: inline-block;"></a>&nbsp;
+      <a href="https://www.tiktok.com/@t57.ai" style="text-decoration: none;"><img src="${b}grp-tk.png" width="22" height="22" border="0" style="display: inline-block;"></a>&nbsp;
+      <a href="https://www.youtube.com/@T57_ai" style="text-decoration: none;"><img src="${b}grp-utube.png" width="22" height="22" border="0" style="display: inline-block;"></a>&nbsp;
+      <a href="https://www.facebook.com/T57.io" style="text-decoration: none;"><img src="${b}grp-fb.png" width="22" height="22" border="0" style="display: inline-block;"></a>&nbsp;
+      <a href="https://www.instagram.com/t57.ai/" style="text-decoration: none;"><img src="${b}grp-ig.png" width="22" height="22" border="0" style="display: inline-block;"></a>
     </td>
   </tr>
+
   <tr>
-    <td colspan="2" style="padding:0;">
-      <img src="${b}bottom.svg" width="100%" style="display:block; border:0;">
+    <td colspan="2" style="padding: 0;">
+      <img src="${b}bottom.png" width="500" border="0" style="display: block; width: 100%; max-width: 500px; height: auto;">
     </td>
   </tr>
 </table>`;
